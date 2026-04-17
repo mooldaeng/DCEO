@@ -1,0 +1,117 @@
+{
+  "lastUpdate": "2026-04-17T05:51:42.166Z",
+  "stocks": {
+    "005930.KS": {
+      "id": "005930.KS",
+      "price": 216500,
+      "formattedPrice": "₩216,500.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:29.007Z"
+    },
+    "000660.KS": {
+      "id": "000660.KS",
+      "price": 1132000,
+      "formattedPrice": "₩1,132,000.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:30.070Z"
+    },
+    "035420.KS": {
+      "id": "035420.KS",
+      "price": 215500,
+      "formattedPrice": "₩215,500.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:31.054Z"
+    },
+    "035720.KS": {
+      "id": "035720.KS",
+      "price": 49900,
+      "formattedPrice": "₩49,900.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:32.083Z"
+    },
+    "373220.KS": {
+      "id": "373220.KS",
+      "price": 417000,
+      "formattedPrice": "₩417,000.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:32.984Z"
+    },
+    "AAPL": {
+      "id": "AAPL",
+      "price": 263.4,
+      "formattedPrice": "$263.40",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:33.811Z"
+    },
+    "TSLA": {
+      "id": "TSLA",
+      "price": 388.9,
+      "formattedPrice": "$388.90",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:34.722Z"
+    },
+    "NVDA": {
+      "id": "NVDA",
+      "price": 198.35,
+      "formattedPrice": "$198.35",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:35.661Z"
+    },
+    "MSFT": {
+      "id": "MSFT",
+      "price": 420.26,
+      "formattedPrice": "$420.26",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:36.775Z"
+    },
+    "GOOGL": {
+      "id": "GOOGL",
+      "price": 336.02,
+      "formattedPrice": "$336.02",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:37.906Z"
+    },
+    "069500.KS": {
+      "id": "069500.KS",
+      "price": 94080,
+      "formattedPrice": "₩94,080.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:38.708Z"
+    },
+    "102110.KS": {
+      "id": "102110.KS",
+      "price": 94115,
+      "formattedPrice": "₩94,115.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:39.697Z"
+    },
+    "122630.KS": {
+      "id": "122630.KS",
+      "price": 101800,
+      "formattedPrice": "₩101,800.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:40.650Z"
+    },
+    "133690.KS": {
+      "id": "133690.KS",
+      "price": 172405,
+      "formattedPrice": "₩172,405.00",
+      "change": "0",
+      "percent": "0%",
+      "updatedAt": "2026-04-17T05:51:41.651Z"
+    }
+  }
+}

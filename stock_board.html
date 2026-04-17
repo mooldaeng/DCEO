@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockBoard - 종합 주식 현황판</title>
+    <link rel="stylesheet" href="stock_style.css">
+    <!-- 실제 시장 데이터 -->
+    <script src="market_data.js"></script>
+    <!-- ApexCharts CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 상단 헤더 -->
+        <header>
+            <div class="logo">StockBoard</div>
+            <div id="exchange-bar" class="exchange-bar">
+                <!-- 환율 정보가 여기에 렌더링됨 -->
+            </div>
+            <nav class="category-tabs">
+                <button class="tab-btn active" data-category="domestic">국내주식</button>
+                <button class="tab-btn" data-category="global">해외주식</button>
+                <button class="tab-btn" data-category="etf">ETF (KODEX/TIGER)</button>
+            </nav>
+        </header>
+
+        <div class="container">
+            <!-- 좌측 사이드바: 종목 리스트 -->
+            <aside class="sidebar">
+                <div class="search-box">
+                    <input type="text" id="ticker-search" placeholder="종목 코드/명 검색...">
+                </div>
+                <ul id="ticker-list">
+                    <!-- 종목 리스트가 JS에서 동적 생성됨 -->
+                </ul>
+            </aside>
+
+            <!-- 중앙 메인 영역 -->
+            <main class="main-content">
+                <section class="chart-section card">
+                    <div class="chart-header">
+                        <div class="selected-info">
+                            <div class="title-row">
+                                <h2 id="current-name">삼성전자</h2>
+                                <span id="current-ticker">005930.KS</span>
+                            </div>
+                            <div id="price-display" class="price-display">
+                                <span id="current-price" class="price">--</span>
+                                <span id="price-change" class="change">--</span>
+                            </div>
+                        </div>
+                        <div class="period-btns">
+                            <button class="period-btn" data-period="1D">1D</button>
+                            <button class="period-btn" data-period="1W">1W</button>
+                            <button class="period-btn active" data-period="1M">1M</button>
+                            <button class="period-btn" data-period="1Y">1Y</button>
+                        </div>
+                    </div>
+                    <div id="main-chart"></div>
+                </section>
+
+                <section class="news-section card">
+                    <h3>최신 주식 뉴스</h3>
+                    <ul id="news-list">
+                        <li class="loading">뉴스를 불러오는 중...</li>
+                    </ul>
+                </section>
+            </main>
+
+            <!-- 우측 사이드바: 재무제표 -->
+            <aside class="financial-panel">
+                <section class="financial-section card">
+                    <h3>기업 재무 요약 (100대 기업)</h3>
+                    <div id="financial-data">
+                        <p class="empty-msg">종목을 선택해 주세요.</p>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+    <script src="stock_app.js"></script>
+</body>
+</html>

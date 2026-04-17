@@ -1,0 +1,250 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5a623;
+    --bg-color: #f4f7f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --ball-1: #fbc400; /* 1-10 */
+    --ball-11: #69c8f2; /* 11-20 */
+    --ball-21: #ff7272; /* 21-30 */
+    --ball-31: #aaa;    /* 31-40 */
+    --ball-41: #b0d840; /* 41-45 */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#app {
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-color);
+    position: relative;
+    padding-bottom: 70px; /* nav height */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+main {
+    padding: 15px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.option-group {
+    margin-bottom: 15px;
+}
+
+.option-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.option-group input, .option-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+
+button.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.balls-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-size: 1.1rem;
+    box-shadow: inset -3px -3px 6px rgba(0,0,0,0.2), 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.ball.range-1 { background-color: var(--ball-1); }
+.ball.range-11 { background-color: var(--ball-11); }
+.ball.range-21 { background-color: var(--ball-21); }
+.ball.range-31 { background-color: var(--ball-31); }
+.ball.range-41 { background-color: var(--ball-41); }
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    height: 65px;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    padding: 5px;
+    color: #888;
+    flex: 1;
+}
+
+.nav-item.active {
+    color: var(--primary-color);
+}
+
+.nav-item .icon {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.nav-item span:not(.icon) {
+    font-size: 0.75rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.saved-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.saved-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.saved-item-balls {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.saved-item-balls .ball {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+}
+
+.memo-area {
+    width: 100%;
+    padding: 8px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.purchased-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #4caf50;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+
+.match-status {
+    font-weight: bold;
+    color: var(--primary-color);
+}
